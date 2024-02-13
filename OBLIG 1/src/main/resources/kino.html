@@ -10,9 +10,6 @@
 <section id="main">
     <h1>Oblig 1. DATA1700</h1>
     <h2>Bestilling av Kinobilleter</h2>
-
-    <form onsubmit="return kinoBilletter()" method="post">
-
         <label for="Film">Velg film: </label>
         <select id="Film" style="width: 250px;" onchange="velg();">
             <option value="velgFilm">Velg film her</option>
@@ -21,38 +18,51 @@
             <option value="avengersEndgame">Avengers Endgame</option>
             <option value="insidious3">Insidious 3</option>
         </select>
+
+    <!-- Antall Kinobilletter -->
+    <div class="container">
+        <form id="form" action="/">
         <h2></h2>
+        <div class="input-controll">
         <label for="tall">Antall: </label>
         <input type="text" id="tall" style="width: 20px;" required minlength="1" onchange="sjekk();"/>
+    </div>
+     <!-- Registrering -->
 
-        <br>
-        <label for="forNavn">Fornavn: </label>
+            <div class="input-controll">
+        <label for="forNavn">Fornavn</label>
         <input id="forNavn" name="forNavn" type="text" value="" required minlength="3" maxlength="15" placeholder="Fornavn">
-        <script>
-            document.getElementById('forNavn').addEventListener('input', function () {
-                if (this.validity.valueMissing) {
-                    this.setCustomValidity('Skriv inn fornavn');
-                } else {
-                    this.setCustomValidity('');
-                }
-            });
-        </script>
-        <br>
-        <label for="EtterNavn">Etternavn: </label>
+        <div class="error"></div>
+            </div>
+
+            <div class="input-controll">
+        <label for="EtterNavn">Etternavn</label>
         <input id="etterNavn" name="etterNavn" type="text" value="" required minlength="3" maxlength="15" placeholder="Etternavn">
-        <br>
-        <label for="telefonnr">Telefonnr: </label>
-        <input id="telefonnr" name="telefonnr" type="number" value="" required minlength="8" maxlength="10" placeholder="12345678">
-        <br>
-        <label for="E-post">E-post: </label>
-        <input id="E-post" name="E-post" type="text" value="" required minlength="3" maxlength="15" placeholder="Epost@Eksempel.no">
-        <br>
+        <div class="error"></div>
+            </div>
+
+            <div class="input-controll">
+        <label for="telefonnr">Telefonnr</label>
+        <input id="telefonnr" name="telefonnr" type="number" required minlength="8" maxlength="10" placeholder="12345678">
+        <div class="error"></div>
+            </div>
+
+            <div class="input-controll">
+        <label for="E-post">E-post</label>
+        <input id="E-post" name="E-post" type="text" value="" required minlength="3" maxlength="15" placeholder="Epost@eksempel.no">
+        <div class="error"></div>
+            </div>
+        <input type="submit" value="submit">
         <h2></h2>
         <button onclick="kjøpbillett()">Kjøp Billett</button>
     </form>
+    </div>
+    <!-- Vise billetter -->
     <h2>Alle Billetter</h2>
     <div id="ut"></div>
     <br>
+    <!-- Slette billetter -->
+    <h3>Slett billett</h3>
     <button onclick="slettbilletter()">Slett billettene</button>
 </section>
 </body>
