@@ -40,7 +40,7 @@ const validateInputs = () => {
 
     if (fornavnValue === "") {
 
-   
+
 }
 
 //Kinobillett
