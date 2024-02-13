@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 1</title>
+    <script src="billett.js"></script>
+
+</head>
+<body>
+
+<h1>Bestlilling av kinobiletter</h1>
+<form onsubmit="registrer(); return false;" method="post">
+    <form>
+        <table>
+            <tr>
+                <th><label for="Film">Velg film:</label></th>
+                <td>
+                    <select id="Film" style="width: 200px;" required>
+                        <option>Avengers</option>
+                        <option>Avengers Age of Ultron</option>
+                        <option>Avengers Infinity War</option>
+                        <option>Avengers Endgame</option>
+                        <option>Avengers Secret Wars</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Antall">Antall:</label></th>
+                <td>
+                    <input type="text" id="Antall" value="" style="width: 30px" min="1" required
+                           oninvalid="this.setCustomValidity('Velg antall må være mer enn 0')"
+                           oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Fornavn">Fornavn:</label></th>
+                <td>
+                    <input type="text" id="Fornavn" value="" required placeholder="Fornavn"
+                           oninvalid="this.setCustomValidity('Vennligst skriv inn fornavn')"
+                           oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Etternavn">Etternavn:</label></th>
+                <td>
+                    <input type="text" id="Etternavn" value="" required placeholder="Etternavn"
+                           oninvalid="this.setCustomValidity('Vennligst skriv inn etternavn')"
+                           oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Telefonnr">Telefonnr:</label></th>
+                <td>
+                    <input type="tel" id="Telefonnr" value="" required maxlength="8" placeholder="12345678"
+                           oninvalid="this.setCustomValidity('Vennligst skriv inn telefonnr')"
+                           oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="E-post">Epost:</label></th>
+                <td>
+                    <input type="email" id="E-post" value="" required placeholder="Epost@eksempel.no"
+                           oninvalid="this.setCustomValidity('Vennligst skriv inn gyldig e-post')"
+                           oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+
+</form>
+
+<h3>Alle billetter</h3>
+<div id="Ut"></div>
+
+<button onclick="slettbilleter();">Slett billetter</button>
+
+
+
+</body>
+</html>
