@@ -1,0 +1,69 @@
+<!--<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 1</title>
+    <script src="test.js"></script>
+
+</head>
+<body>
+
+<h1>Bestlilling av kinobiletter</h1>
+        <table>
+            <tr>
+                <th><label for="Film">Velg film:</label></th>
+                <td>
+                    <select id="Film" style="width: 200px;" >
+                        <option>Velg en film</option>
+                        <option>Avengers</option>
+                        <option>Avengers Age of Ultron</option>
+                        <option>Avengers Infinity War</option>
+                        <option>Avengers Endgame</option>
+                        <option>Avengers Secret Wars</option>
+                    </select><span id="Filmcheck" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+
+                <th><label for="Antall">Antall:</label></th>
+                <td>
+                    <input type="text" id="Antall" value="" style="width: 30px" min="1"><span id="Antallcheck" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+
+                <th><label for="Fornavn">Fornavn:</label></th>
+                <td>
+                    <input type="text" id="Fornavn" value=""  placeholder="Fornavn"><span id="Fornavncheck" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Etternavn">Etternavn:</label></th>
+                <td>
+                    <input type="text" id="Etternavn" value=""  placeholder="Etternavn"><span id="Etternavncheck" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Telefonnr">Telefonnr:</label></th>
+                <td>
+                    <input type="tel" id="Telefonnr" value=""  maxlength="8" placeholder="12345678"><span id="Telefonnrcheck" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="E-post">Epost:</label></th>
+                <td>
+                    <input type="email" id="E-post" value=""  placeholder="Epost@eksempel.no"><span id="Epostcheck" style="color: red;"></span>
+                </td>
+            </tr>
+        </table>
+        <tr><td><button onclick="registrer()">Kjøp billett</button></td></tr>
+
+<h3>Alle billetter</h3>
+
+<div id="Ut"></div>
+<button onclick="slett();">Slett billetter</button>
+
+
+
+</body>
+</html>
