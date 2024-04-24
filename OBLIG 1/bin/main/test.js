@@ -1,4 +1,4 @@
-const billetter = [];
+/*const billetter = [];
 
 
 function visBillett() {
@@ -20,7 +20,7 @@ function registrer() {
     const Film = document.getElementById('Film').value;
     const antall = Number(document.getElementById('Antall').value);
     const fornavn = document.getElementById('Fornavn').value;
-    const etternavn = document.getElementById(' Etternavn').value;
+    const etternavn = document.getElementById('Etternavn').value;
     const telefonnr = document.getElementById('Telefonnr').value;
     const epost = document.getElementById('E-post').value;
 
@@ -51,7 +51,7 @@ function registrer() {
         document.getElementById("Etternavncheck").textContent = "";
     }
     if (!/^[0-9]{8}$/.test(telefonnr)) {
-        document.getElementById("Telefonnrcheck").textContent = "Skriv inn telefonnr";
+        document.getElementById("Telefonnrcheck").textContent = "Telefonnummeret må være 8 siffer";
         isValid = false;
     }else {
         document.getElementById("Telefonnrcheck").textContent = "";
@@ -88,9 +88,9 @@ function registrer() {
 // Slett billett
 function slett() {
     billetter.splice(0, billetter.length);
-    document.getElementById("Ut").innerHTML = "";
+    document.getElementById("Ut");
 }
-
+*/
 
 
 

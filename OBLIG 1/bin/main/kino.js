@@ -20,7 +20,7 @@ function registrer() {
     const Film = document.getElementById('Film').value;
     const antall = Number(document.getElementById('Antall').value);
     const fornavn = document.getElementById('Fornavn').value;
-    const etternavn = document.getElementById(' Etternavn').value;
+    const etternavn = document.getElementById('Etternavn').value;
     const telefonnr = document.getElementById('Telefonnr').value;
     const epost = document.getElementById('E-post').value;
 
